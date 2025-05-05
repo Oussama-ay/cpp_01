@@ -29,5 +29,5 @@ Zombie::~Zombie()
 		std::cout << "Foo";
 	else
 		std::cout << "<" << this->name << ">";
-	std::cout << "dies. LOL." << std::endl;
+	std::cout << ": dies. LOL." << std::endl;
 }
