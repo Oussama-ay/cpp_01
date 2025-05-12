@@ -1,10 +1,10 @@
-NAME = Moar_brainz
+NAME = HI_THIS_IS_BRAIN
 
 CC = c++ -Wextra -Wall -Werror
 
 VERSION = -std=c++98
 
-SRC = main.cpp Zombie.cpp zombieHorde.cpp
+SRC = main.cpp
 
 RM = rm -rf
 

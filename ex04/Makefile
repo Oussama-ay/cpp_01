@@ -1,10 +1,10 @@
-NAME = Moar_brainz
+NAME = Sed_is_for_losers
 
-CC = c++ -Wextra -Wall -Werror
+CC = g++ -Wextra -Wall -Werror
 
 VERSION = -std=c++98
 
-SRC = main.cpp Zombie.cpp zombieHorde.cpp
+SRC = main.cpp
 
 RM = rm -rf
 

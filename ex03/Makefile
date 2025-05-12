@@ -1,10 +1,10 @@
-NAME = Moar_brainz
+NAME = Unnecessary_violence
 
 CC = c++ -Wextra -Wall -Werror
 
 VERSION = -std=c++98
 
-SRC = main.cpp Zombie.cpp zombieHorde.cpp
+SRC = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 
 RM = rm -rf
 

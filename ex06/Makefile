@@ -1,10 +1,10 @@
-NAME = Moar_brainz
+NAME = harlFilter
 
-CC = c++ -Wextra -Wall -Werror
+CC = c++ -Wextra -Wall -Werror -w
 
 VERSION = -std=c++98
 
-SRC = main.cpp Zombie.cpp zombieHorde.cpp
+SRC = main.cpp Harl.cpp
 
 RM = rm -rf
 
