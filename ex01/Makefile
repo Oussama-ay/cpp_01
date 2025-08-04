@@ -1,23 +1,28 @@
 NAME = Moar_brainz
 
-CC = c++ -Wextra -Wall -Werror
-
-VERSION = -std=c++98
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRC = main.cpp Zombie.cpp zombieHorde.cpp
 
+OBJ = $(SRC:.cpp=.o)
+
 RM = rm -rf
 
-all : $(NAME)
+all: $(NAME)
 
-$(NAME) : $(SRC)
-	$(CC) $(VERSION) $(SRC) -o $(NAME)
+$(NAME): $(OBJ)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
-clean :
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+clean:
+	$(RM) $(OBJ)
+
+fclean: clean
 	$(RM) $(NAME)
 
-fclean : clean
+re: fclean all
 
-re : fclean all
-
-.PHONY : all clean fclean re
+.PHONY: all clean fclean re

@@ -1,22 +1,28 @@
 NAME = harlFilter
 
-CC = c++ -Wextra -Wall -Werror -w
+CXX = c++
 
-VERSION = -std=c++98
+CXXFLAGS = -Wextra -Wall -Werror -std=c++98
 
 SRC = main.cpp Harl.cpp
 
+OBJ = $(SRC:.cpp=.o)
+
 RM = rm -rf
 
-all : $(NAME)
+all: $(NAME)
 
-$(NAME) : $(SRC)
-	$(CC) $(VERSION) $(SRC) -o $(NAME)
+$(NAME): $(OBJ)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
-clean :
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+clean:
+	$(RM) $(OBJ)
+
+fclean: clean
 	$(RM) $(NAME)
-
-fclean : clean
 
 re : fclean all
 

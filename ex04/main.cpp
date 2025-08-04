@@ -35,6 +35,7 @@ int	main(int ac, char **av)
 	std::ofstream MyFile_replace((std::string(av[1]) + ".replace").c_str());
 	if (!MyFile_replace.is_open())
 	{
+		MyFile.close();
 		std::cerr << "Error: could not create file " << av[1] << ".replace" << std::endl;
 		return (1);
 	}
@@ -42,6 +43,8 @@ int	main(int ac, char **av)
 	// Read the file line by line and replace all occurrences of s1 with s2
 	std::string line;
 	while (std::getline(MyFile, line))
-		MyFile_replace << replace(line, s1, s2) << std::endl;
+		MyFile_replace << replace(line, s1, s2) << "\n";
+	MyFile.close();
+	MyFile_replace.close();
 	return (0);
 }
