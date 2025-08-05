@@ -27,6 +27,7 @@ void	Harl::error( void )
 void	Harl::complain( std::string level )
 {
 	std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	// array of pointers to member functions
 	void (Harl::*functions[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 
 	int index = 0;
