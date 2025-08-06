@@ -33,5 +33,5 @@ void	Harl::complain( std::string level )
 	int index = 0;
 	while (index < 4 && levels[index] != level)
 		index++;
-	(index < 4 ? (this->*functions[index])() : (void)(std::cout << "Invalid level: " << level << std::endl));
+	(index < 4 ? (this->*functions[index])() : (void)(std::cout << "Probably complaining about insignificant problems." << std::endl));
 }
