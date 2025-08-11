@@ -145,19 +145,3 @@ In C++, file handling is done using classes from the `<fstream>` header.
     ```cpp
     file.close();
     ```
-    
-
----
-
-### **Orthodox Canonical Form (Preview)**
-
-Used from Module 02 onward, but important to mention:
-
-A class should have:
-
-1. **Default constructor**
-2. **Copy constructor**
-3. **Copy assignment operator**
-4. **Destructor**
-
-This ensures proper object copying, assignment, and destruction.
